@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="">
+    <div class="weather-app w-full h-screen z-10 font-sf">
+
+        <!-- Background Video -->
+        <div class="weather-bg absolute bg-cover bg-no-repeat bg-center w-full h-full">
+            
+            <video id="background-video" autoplay muted loop class="w-full h-screen object-cover">
+                <source id="video-source" src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Overlay -->
+        <div class="overlay absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
+
+        <div class="flex flex-col main-cont w-full h-full z-20 relative lg:flex lg:flex-row overflow-auto">
+
+            <div class="w-full flex flex-col justify-between p-10">
+                <div class="upper-cont text-white items-center mb-10 md:mb-0 md:items-start md:pl-20 flex flex-col gap-1">
+                    <h1 class="dayOfWeek"> error </h1>
+
+                    <div class="flex gap-4 ">
+                        <h1 class="monthNdDay text-[1rem] md:text-lg md:mb-8"> error </h1>
+                        <h1 class="time md:mb-8"> </h1>
+                    </div>
+
+                    <h1 class="condition text-3xl md:text-4xl"> error </h1>
+                </div>
+
+                <div class="lower-cont text-white md:pl-20 md:pb-8   flex flex-col items-center md:items-start gap-3">
+                    <h1 class="temp text-7xl md:text-[7rem] font-medium font-ver "> </h1>
+                    <h1 class="city indent-1 text-[1rem] md:text-lg"> </h1>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-[70%]">
+                <div class="w-full h-full p-8 md:p-20 pt-14 flex flex-col gap-10 bg-white/5 shadow-lg ring-1 ring-black/5 backdrop-blur-md">
+                    <div class="w-full flex flex-col h-full">
+                        <div class="flex mb-10">
+                            <input autocomplete="on" class="bg-transparent border-none text-white placeholder-white outline-none p-2 w-full rounded-l-sm rounded-r" type="text" placeholder="enter city" data-input>
+                            <button class="btn btn-neutral rounded-l-sm">Search</button>
+                        </div>
+
+                        <div class="suggested-locs text-white flex flex-col gap-6 text-sm">
+                            <h1 class="suggested-loc"> New York</h1>
+                            <h1 class="suggested-loc"> New Delhi </h1>
+                            <h1 class="suggested-loc"> Toronto </h1>
+                            <h1 class="suggested-loc"> Tokyo </h1>
+                        </div>
+                    </div>
+
+                    <hr class="w-full">
+
+                    <div class="text-white flex flex-col gap-8 h-full text-sm">
+                        <h1 class=""> Weather Details </h1>
+
+                        <div class="flex justify-between w-full">
+                            <h1> Cloudy: </h1>
+                            <h1 class="cloudy"> 90% </h1>
+                        </div>
+                        <div class="flex justify-between w-full">
+                            <h1> Humidity: </h1>
+                            <h1 class="humid"> 90% </h1>
+                        </div>
+                        <div class="flex justify-between w-full">
+                            <h1> Wind: </h1>
+                            <h1 class="wind"> 90% </h1>
+                        </div>
+                        <div class="flex justify-between w-full">
+                            <h1> Rain: </h1>
+                            <h1 class="rain"> 90% </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script type="module" src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+</html>
