@@ -5,8 +5,8 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: black;
+body,html {
+     background-color: black;
       height: 100dvh;
      overflow-x: hidden; /* Prevent horizontal scroll */
                                                 
